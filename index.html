@@ -3,41 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonus Facile Italia 2026</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Bonus Facile Italia 2026: La guida definitiva per scoprire le agevolazioni, calcolare l'ISEE e richiedere i bonus statali.">
+    <meta name="keywords" content="Bonus 2026, ISEE 2026, Assegno Unico, Ristrutturazioni, Agevolazioni Italia">
+    <title>Bonus Facile Italia 2026 | Agevolazioni e ISEE</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <style>
+        /* --- CSS VARIABLES (Material Design 3 Palette) --- */
+        :root {
+            --md-primary: #0b57d0;
+            --md-on-primary: #ffffff;
+            --md-primary-container: #d3e3fd;
+            --md-on-primary-container: #041e49;
+            --md-surface: #fdfbff;
+            --md-on-surface: #1a1c1e;
+            --md-surface-variant: #e1e2e8;
+            --md-outline: #74777f;
+            --elevation-1: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+            --elevation-2: 0 1px 2px 0 rgba(0,0,0,0.3), 0 2px 6px 2px rgba(0,0,0,0.15);
+            --transition-standard: 0.3s cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        /* --- RESET & TYPOGRAPHY --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--md-surface);
+            color: var(--md-on-surface);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(253, 251, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--elevation-1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--md-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--md-surface) 0%, var(--md-primary-container) 100%);
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--md-on-primary-container);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--md-on-surface);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 100px; /* Fully rounded for Material 3 */
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition-standard);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--md-primary);
+            color: var(--md-on-primary);
+        }
+
+        .btn-primary:hover {
+            box-shadow: var(--elevation-2);
+            background-color: #0842a0;
+        }
+
+        /* --- MAIN CONTENT & GRID --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--md-primary);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* --- MATERIAL CARDS --- */
+        .card {
+            background: var(--md-surface);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--elevation-1);
+            transition: var(--transition-standard);
+            border: 1px solid var(--md-surface-variant);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            box-shadow: var(--elevation-2);
+            transform: translateY(-4px);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            color: var(--md-primary);
+            margin-bottom: 1rem;
+        }
+
+        .card-badge {
+            display: inline-block;
+            background: var(--md-primary-container);
+            color: var(--md-on-primary-container);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #44474e;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        /* --- INTERACTIVE CALCULATOR --- */
+        .calculator-section {
+            background-color: var(--md-surface-variant);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-top: 4rem;
+        }
+
+        .calc-form {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .input-group input, .input-group select {
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--md-outline);
+            background: var(--md-surface);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-standard);
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--md-primary);
+            box-shadow: 0 0 0 2px var(--md-primary-container);
+        }
+
+        #calc-result {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: var(--md-primary-container);
+            color: var(--md-on-primary-container);
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 500;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        /* --- ANIMATIONS --- */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a1c1e;
+            color: #e1e2e8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
 </head>
 <body>
 
-<div class="bonus-facile-wrapper">
-    <section class="bf-hero">
-        <div class="bf-container">
-            <h1>Bonus Facile Italia 2026🚀</h1>
-            <p>La guida chiara e aggiornata al 2026 per scoprire agevolazioni, calcolare l'ISEE e richiedere i bonus statali a cui hai diritto.</p>
-            <a href="#scopri-bonus" class="bf-btn">Scopri i bonus per te</a>
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="material-icons-round">account_balance</span>
+                Bonus Facile 2026
+            </a>
+            <a href="#calcolatore" class="btn btn-primary">Simula ISEE</a>
         </div>
+    </header>
+
+    <section class="hero">
+        <h1 class="animate-on-scroll">Il Fisco reso Semplice, per Tutti.</h1>
+        <p class="animate-on-scroll">Scopri le agevolazioni aggiornate al 2026. Calcola il tuo ISEE, richiedi i bonus statali e ottimizza le tue finanze familiari in pochi clic.</p>
+        <a href="#articoli" class="btn btn-primary animate-on-scroll">
+            Esplora i Bonus <span class="material-icons-round">arrow_downward</span>
+        </a>
     </section>
 
-    <div class="bf-container">
-        <div id="scopri-bonus" class="bf-grid">
-            <a href="#" class="bf-card">
-                <span class="bf-badge">Famiglia & Figli</span>
-                <h3>Assegno Unico e Asilo Nido 2026</h3>
-                <p>Scopri i nuovi importi, le fasce ISEE aggiornate e le istruzioni per fare domanda all'INPS.</p>
-            </a>
-            <a href="#" class="bf-card">
-                <span class="bf-badge">Casa & Ristrutturazioni</span>
-                <h3>Ecobonus e Bonus Mobili</h3>
-                <p>Tutte le scadenze sulle detrazioni fiscali per chi acquista o ristruttura casa nel 2026.</p>
-            </a>
-            <a href="#" class="bf-card">
-                <span class="bf-badge">ISEE & Fisco</span>
-                <h3>Guida al Nuovo ISEE Precompilato</h3>
-                <p>Come abbassare il tuo ISEE legalmente e quali documenti servono per compilarlo online.</p>
-            </a>
-        </div>
-    </div>
-</div>
+    <main class="container" id="articoli">
+        <h2 class="section-title animate-on-scroll">Le Novità del 2026</h2>
+        
+        <div class="articles-grid">
+            
+            <article class="card animate-on-scroll">
+                <span class="material-icons-round icon">family_restroom</span>
+                <span class="card-badge">Famiglia & Figli</span>
+                <h3>Assegno Unico 2026: Nuovi Importi e Scadenze</h3>
+                <p>La Legge di Bilancio 2026 ha introdotto una maggiorazione del 10% per i nuclei familiari con ISEE inferiore a 15.000€. L'Assegno Unico Universale viene ora erogato automaticamente incrociando i dati dell'Agenzia delle Entrate, riducendo la burocrazia. Scopri come verificare il tuo stato di avanzamento pratica e quali documenti servono per l'ISEE minorenni.</p>
+                <a href="#" class="btn btn-primary" style="background: transparent; color: var(--md-primary); padding: 0;">Leggi la guida completa <span class="material-icons-round" style="font-size: 1.2rem;">arrow_forward</span></a>
+            </article>
 
+            <article class="card animate-on-scroll">
+                <span class="material-icons-round icon">home_work</span>
+                <span class="card-badge">Casa & Ristrutturazioni</span>
+                <h3>Ecobonus e Bonus Mobili: Cosa cambia</h3>
+                <p>Addio alla cessione del credito, ma le detrazioni in 10 anni si rinnovano. L'Ecobonus 2026 punta tutto sull'efficienza energetica (Classe D europea) rimborsando fino al 65% per infissi e pompe di calore. Inoltre, il Bonus Mobili viene esteso per le giovani coppie. Ecco la checklist dei documenti da inviare all'ENEA entro 90 giorni dai lavori.</p>
+                <a href="#" class="btn btn-primary" style="background: transparent; color: var(--md-primary); padding: 0;">Scopri i requisiti <span class="material-icons-round" style="font-size: 1.2rem;">arrow_forward</span></a>
+            </article>
+
+            <article class="card animate-on-scroll">
+                <span class="material-icons-round icon">request_quote</span>
+                <span class="card-badge">ISEE & Fisco</span>
+                <h3>Guida al Nuovo ISEE Precompilato</h3>
+                <p>Ottenere l'ISEE non è mai stato così veloce. Il portale INPS 2026 acquisisce automaticamente giacenze medie e saldi al 31 dicembre di due anni fa. Ti spieghiamo come contestare eventuali errori del precompilato, come funziona l'ISEE Corrente in caso di perdita del lavoro e come gestire correttamente i conti cointestati.</p>
+                <a href="#" class="btn btn-primary" style="background: transparent; color: var(--md-primary); padding: 0;">Scarica il modulo <span class="material-icons-round" style="font-size: 1.2rem;">arrow_forward</span></a>
+            </article>
+
+        </div>
+
+        <section class="calculator-section animate-on-scroll" id="calcolatore">
+            <h2 class="section-title" style="margin-bottom: 1rem;">Simulatore Bonus Famiglia 2026</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Inserisci i tuoi dati per scoprire una stima indicativa dell'assegno mensile a cui potresti avere diritto.</p>
+            
+            <form class="calc-form" id="bonusForm" onsubmit="calculateBonus(event)">
+                <div class="input-group">
+                    <label for="isee">Valore ISEE stimato (€)</label>
+                    <input type="number" id="isee" placeholder="Es. 14500" required min="0">
+                </div>
+                <div class="input-group">
+                    <label for="figli">Numero di figli a carico</label>
+                    <input type="number" id="figli" placeholder="Es. 2" required min="1" max="10">
+                </div>
+                <div class="input-group">
+                    <label for="eta">Età del figlio minore</label>
+                    <select id="eta" required>
+                        <option value="under3">Meno di 3 anni</option>
+                        <option value="over3">Tra 3 e 21 anni</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="justify-content: center; margin-top: 1rem;">
+                    <span class="material-icons-round">calculate</span> Calcola Stima
+                </button>
+
+                <div id="calc-result">
+                    </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Bonus Facile Italia. Creato per semplificare la burocrazia.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #74777f;">Le informazioni qui riportate sono simulazioni. Consultare sempre il sito INPS o un CAF per i dati ufficiali.</p>
+    </footer>
+
+    <script>
+        // 1. Animazioni allo scroll (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Anima solo la prima volta
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // 2. Logica Calcolatore Bonus (Simulazione Frontend)
+        function calculateBonus(event) {
+            event.preventDefault(); // Evita il ricaricamento della pagina
+
+            const isee = parseFloat(document.getElementById('isee').value);
+            const figli = parseInt(document.getElementById('figli').value);
+            const eta = document.getElementById('eta').value;
+            const resultDiv = document.getElementById('calc-result');
+
+            let baseAmount = 0;
+
+            // Logica di simulazione semplificata basata su range
+            if (isee <= 17000) {
+                baseAmount = 199.40;
+            } else if (isee > 17000 && isee <= 43240) {
+                // Formula fittizia decrescente
+                baseAmount = 199.40 - ((isee - 17000) * 0.005);
+            } else {
+                baseAmount = 57.00; // Quota minima
+            }
+
+            // Maggiorazione minori di 3 anni
+            if (eta === 'under3') {
+                baseAmount += 30;
+            }
+
+            const totalMonthly = Math.max((baseAmount * figli), (57 * figli));
+
+            // Mostra il risultato con animazione
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <span class="material-icons-round" style="font-size: 2rem; margin-bottom: 0.5rem; color: #0842a0;">verified</span><br>
+                Stima Assegno Unico Mensile:<br>
+                <span style="font-size: 2rem; font-weight: 700; color: #041e49;">€ ${totalMonthly.toFixed(2)}</span><br>
+                <span style="font-size: 0.8rem; font-weight: 400;">*L'importo è una stima calcolata sui parametri 2026.</span>
+            `;
+        }
+    </script>
 </body>
 </html>
